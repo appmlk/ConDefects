@@ -1,0 +1,1 @@
+_,s=open(0);print('oiunt'[s.replace('.','')=='|*|\n'::2])

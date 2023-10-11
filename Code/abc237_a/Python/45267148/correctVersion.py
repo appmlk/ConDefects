@@ -1,0 +1,1 @@
+print("Yes" if (a:=int(input()))<(1<<31) and a>=-(1<<31) else "No")

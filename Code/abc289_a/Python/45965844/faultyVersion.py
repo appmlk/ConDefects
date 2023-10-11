@@ -1,0 +1,1 @@
+print(input().replace("0", "1").replace("1", "0"))

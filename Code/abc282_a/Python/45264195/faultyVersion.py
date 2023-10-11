@@ -1,0 +1,1 @@
+print("ABCDEFGHIJKLMNOPQRSTUVWZ"[:int(input())])

@@ -1,0 +1,1 @@
+print('oiunt'[[*open(0)][1].replace('.','')!='|*|'::2])

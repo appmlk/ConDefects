@@ -1,0 +1,1 @@
+print("".join(map(str, [(i+1)%2 for i in map(int, list(input()))])))

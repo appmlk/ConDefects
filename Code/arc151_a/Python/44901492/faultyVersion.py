@@ -1,0 +1,31 @@
+n=int(input())
+s=input()
+t=input()
+cnt=0
+ans=''
+for i in range(n):
+  if(s[i]!=t[i]):
+    cnt+=1
+if(cnt%2==1):
+  ans='-1'
+else:
+  hum_s=0
+  hum_t=0
+  for i in range(n):
+    if(s[i]==t[i]):
+      ans+='0'
+    elif(s[i]==0):
+      if(hum_t<cnt//2):
+        ans+='0'
+        hum_t+=1
+      else:
+        ans+='1'
+        hum_s+=1
+    else:
+      if(hum_s<cnt//2):
+        ans+='0'
+        hum_s+=1
+      else:
+        ans+='1'
+        hum_t+=1  
+print(ans)

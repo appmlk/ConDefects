@@ -1,0 +1,1 @@
+print("Yes" if (a:=int(input()))<4294967296 and a>=-4294967296 else "No")
