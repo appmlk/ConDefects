@@ -126,4 +126,4 @@ python3 StuDefects.py coverage -w <dest_dir> -o <output_dir> [options]
 - **Output Files**: The toolkit generates the following output files for each program:
   - `covMatrix.txt`: Contains statement coverage information, where each line represents the coverage for a specific test case.
   - `results.txt`: Holds the test results for each test case, indicating whether the test passed (`True`) or failed (`False`).
-  - `testList.txt`: Lists the order of test case execution, correlating to the lines in `coverage.txt` and `results.txt`.
+  - `testList.txt`: Lists the order of test case execution, correlating to the lines in `covMatrix.txt` and `results.txt`.
