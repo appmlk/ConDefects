@@ -272,7 +272,7 @@ def runTest(destination_directory, output_directory, task, testLimit, cwd, cover
             print("pass rate:",passNum/len(res))
             if coverage!=None:
                 covMatrixPath=os.path.join(output_directory,dir,languag,codeID,"covMatrix.txt")
-                resultPath=os.path.join(output_directory,dir,languag,codeID,"result.txt")
+                resultPath=os.path.join(output_directory,dir,languag,codeID,"results.txt")
                 testListPath=os.path.join(output_directory,dir,languag,codeID,"testList.txt")
                 if not os.path.exists(os.path.join(output_directory,dir,languag,codeID)):
                     os.makedirs(os.path.join(output_directory,dir,languag,codeID))
