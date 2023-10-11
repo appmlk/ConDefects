@@ -1,6 +1,7 @@
 # StuDefects Dataset and Toolkit
 
-StuDefects is a specialized dataset and toolkit derived from student submissions on the AtCoder platform, designed to facilitate research in code defect identification and repair. The toolkit features a unique time-filtering option for flexible evaluations of various Language Learning Models and enriches the dataset by annotating each faulty code snippet with its precise fault position, corrected version, and utilities for running tests and collecting coverage information.
+StuDefects is a specialized dataset and toolkit derived from student submissions on the AtCoder platform. It's engineered to advance research in **Fault Localization** and **Program Repair**. The toolkit comes with a unique time-filtering feature, providing the flexibility to evaluate various Language Learning Models. It goes beyond being just a collection of faulty code, offering annotations for each code snippet that detail the precise fault position and its corrected version. Additionally, it includes utilities for **running tests** and **collecting coverage information**.
+
 
 ## Dataset Checkout
 Since the root directory contains a large `Test.zip` file, multiple download options are provided for your convenience.
