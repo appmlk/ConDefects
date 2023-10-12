@@ -209,7 +209,7 @@ def getSrcCov_Java(prename, testLimit, testDataPathDir, tempdir, libdir):
             covMatrix.append([])
             res.append(None)
     if runFailFlag:
-        return None, None
+        return None, None, None
     return covMatrix, res, testList
 
 
@@ -264,6 +264,9 @@ def runTest(destination_directory, output_directory, task, testLimit, cwd, cover
             print("task",dir,"code:",codeID)
             for testIndex in range(len(testList)):
                 print("test:",testList[testIndex],"result:",res[testIndex])
+            if res==None:
+                print("run fail",codeID)
+                continue
             #calculate pass rate
             passNum=0
             for item in res:
