@@ -240,6 +240,8 @@ def runTest(destination_directory, output_directory, task, testLimit, cwd, cover
                 codeIDList.append(code)
 
         targetTestPath = os.path.join(testPath, contestName, dir.split("_")[1].upper(), "in")
+        if not os.path.exists(targetTestPath):
+            targetTestPath = os.path.join(testPath, contestName, "Ex", "in")
         testList = os.listdir(targetTestPath)
         for codeIndex in range(len(codeList)):
             print("--------------------------------------------------")
