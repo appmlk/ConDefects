@@ -1,6 +1,6 @@
-# StuDefects Dataset and Toolkit
+# ConDefects Dataset and Toolkit
 
-StuDefects is a specialized dataset and toolkit derived from student submissions on the AtCoder platform. It's engineered to advance research in **Fault Localization** and **Program Repair**. The toolkit comes with a unique time-filtering feature, providing the flexibility to evaluate various Language Learning Models. It goes beyond being just a collection of faulty code, offering annotations for each code snippet that detail the precise fault position and its corrected version. Additionally, it includes utilities for **running tests** and **collecting coverage information**.
+ConDefects is a specialized dataset and toolkit derived from student submissions on the AtCoder platform. It's engineered to advance research in **Fault Localization** and **Program Repair**. The toolkit comes with a unique time-filtering feature, providing the flexibility to evaluate various Language Learning Models. It goes beyond being just a collection of faulty code, offering annotations for each code snippet that detail the precise fault position and its corrected version. Additionally, it includes utilities for **running tests** and **collecting coverage information**.
 
 
 ## Dataset Checkout
@@ -18,16 +18,16 @@ The root directory also contains two readable files, `date.txt` and `difficulty.
   pip install coverage==4.5
 - Ensure that Java and Python runtimes are properly installed and configured.
 
-# Toolkit Usage Guide for StuDefects
+# Toolkit Usage Guide for ConDefects
 
-To engage with the StuDefects dataset, our toolkit provides a centralized script entry point named `StuDefects.py`. Below is a guide detailing its various features and how to utilize them.
+To engage with the ConDefects dataset, our toolkit provides a centralized script entry point named `ConDefects.py`. Below is a guide detailing its various features and how to utilize them.
 
 ## Meta Information
 
-To access a comprehensive range of metadata about the StuDefects dataset, use the following standardized command:
+To access a comprehensive range of metadata about the ConDefects dataset, use the following standardized command:
 
 ```bash
-python3 StuDefects.py info [options]
+python3 ConDefects.py info [options]
 ```
 
 The `info` command encompasses multiple options for querying specific elements of the dataset:
@@ -37,7 +37,7 @@ The `info` command encompasses multiple options for querying specific elements o
 Getting a list of all available contests:
 
 ```bash
-python3 StuDefects.py info --list-contests
+python3 ConDefects.py info --list-contests
 ```
 
 ### List Contest Tasks
@@ -45,7 +45,7 @@ python3 StuDefects.py info --list-contests
 Getting a list of all available tasks within a specific contest, specify the contest name:
 
 ```bash
-python3 StuDefects.py info --contest <contest_name>
+python3 ConDefects.py info --contest <contest_name>
 ```
 
 ### List Test Cases
@@ -53,7 +53,7 @@ python3 StuDefects.py info --contest <contest_name>
 Getting a list of all test cases available for a specific task, specify the task name:
 
 ```bash
-python3 StuDefects.py info --test-cases --task <task_name>
+python3 ConDefects.py info --test-cases --task <task_name>
 ```
 
 ### List Programs
@@ -61,7 +61,7 @@ python3 StuDefects.py info --test-cases --task <task_name>
 Getting a list of all programs available as well as their ID for a specific task, specify the task name along with the language (`java` or `python`):
 
 ```bash
-python3 StuDefects.py info --programs --task <task_name> --language <language>
+python3 ConDefects.py info --programs --task <task_name> --language <language>
 ```
 
 ### Program Fault Details
@@ -69,7 +69,7 @@ python3 StuDefects.py info --programs --task <task_name> --language <language>
 Getting details about the fault position, content of faulty statement, and the corresponding corrected statement, specify the program ID:
 
 ```bash
-python3 StuDefects.py info --program-id <program_ID>
+python3 ConDefects.py info --program-id <program_ID>
 ```
 
 ## Dataset Checkout
@@ -77,7 +77,7 @@ python3 StuDefects.py info --program-id <program_ID>
 To checkout users' needed dataset, use the following command format:
 
 ```bash
-python3 StuDefects.py checkout -w <dest_dir> [options]
+python3 ConDefects.py checkout -w <dest_dir> [options]
 ```
 
 ### Parameters
@@ -94,7 +94,7 @@ python3 StuDefects.py checkout -w <dest_dir> [options]
 To execute tasks and generate test case reports, use the following command format:
 
 ```bash
-python3 StuDefects.py run -w <dest_dir> [options]
+python3 ConDefects.py run -w <dest_dir> [options]
 ```
 
 ### Specific Task
@@ -102,7 +102,7 @@ python3 StuDefects.py run -w <dest_dir> [options]
 To execute a specific task within the directory, use the `-s` or `--task` option followed by the task name:
 
 ```bash
-python3 StuDefects.py run -w <dest_dir> -s <task_name>
+python3 ConDefects.py run -w <dest_dir> -s <task_name>
 ```
 
 ### Test Case Filter
@@ -110,7 +110,7 @@ python3 StuDefects.py run -w <dest_dir> -s <task_name>
 To run only specific test cases for a given task, use the `-t` or `--test` option followed by the test case identifiers. Note that this option must be used in conjunction with the `-s` or `--task` option:
 
 ```bash
-python3 StuDefects.py run -w <dest_dir> -s <task_name> -t <test_case_Name1> [<test_case_name2> ...]
+python3 ConDefects.py run -w <dest_dir> -s <task_name> -t <test_case_Name1> [<test_case_name2> ...]
 ```
 
 ## Coverage Collection
@@ -118,7 +118,7 @@ python3 StuDefects.py run -w <dest_dir> -s <task_name> -t <test_case_Name1> [<te
 To collect coverage information, use the following command format:
 
 ```bash
-python3 StuDefects.py coverage -w <dest_dir> -o <output_dir> [options]
+python3 ConDefects.py coverage -w <dest_dir> -o <output_dir> [options]
 ```
 
 * `-o <output_dir>`: Specifies the directory where the coverage information will be stored.
