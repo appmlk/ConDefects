@@ -58,7 +58,7 @@ def info(list_contests, contest, task, programs, test_cases, program_id, languag
 def main(cwd):
     import argparse
 
-    parser = argparse.ArgumentParser(description='StuDefects command-line tool.')
+    parser = argparse.ArgumentParser(description='ConDefects command-line tool.')
     subparsers = parser.add_subparsers(dest='command')
 
     # checkout command
@@ -121,6 +121,6 @@ if __name__ == '__main__':
     elif not os.path.exists(testPath) and not os.path.exists(testZipPath):
         print('Test.zip not found.')
         print("Don't worry! You can download it by following the guide on our GitHub repository.")
-        print("Then make sure to place the downloaded Test.zip in the same directory as StuDefects.py.")
+        print("Then make sure to place the downloaded Test.zip in the same directory as ConDefects.py.")
         exit()
     main(cwd)
