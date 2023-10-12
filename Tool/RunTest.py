@@ -230,14 +230,14 @@ def runTest(destination_directory, output_directory, task, testLimit, cwd, cover
         codeIDList=[]
         if os.path.exists(os.path.join(targetContestPath,"Python")):
             codePythonList=os.listdir(os.path.join(targetContestPath,"Python"))
+            for code in codePythonList:
+                codeList.append(os.path.join(targetContestPath, "Python", code, "faultyVersion.py"))
+                codeIDList.append(code)
         if os.path.exists(os.path.join(targetContestPath,"Java")):
             codeJavaList=os.listdir(os.path.join(targetContestPath,"Java"))
-        for code in codePythonList:
-            codeList.append(os.path.join(targetContestPath,"Python",code,"faultyVersion.py"))
-            codeIDList.append(code)
-        for code in codeJavaList:
-            codeList.append(os.path.join(targetContestPath,"Java",code,"faultyVersion.java"))
-            codeIDList.append(code)
+            for code in codeJavaList:
+                codeList.append(os.path.join(targetContestPath,"Java",code,"faultyVersion.java"))
+                codeIDList.append(code)
 
         targetTestPath = os.path.join(testPath, contestName, dir.split("_")[1].upper(), "in")
         testList = os.listdir(targetTestPath)
