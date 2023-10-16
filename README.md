@@ -88,7 +88,6 @@ python3 ConDefects.py checkout -w <dest_dir> [options]
 * **Language** (`-l`): Specifies the programming language (`java` or `python`).
 * **Time Span** (`-t`): Filters tasks by their start and end dates. The dates should be in the format `YYYY-MM-DD`.
 * **Difficulty Level** (`-d`): Filters tasks by their difficulty levels. Enter two integers to specify the lower and upper bounds.
-* **Specific Contest** (`-c`): Filters tasks by associated contest.
 * **Specific Task** (`-s`): Filters tasks by task name.
 
 ## Execution and Test Case Report
