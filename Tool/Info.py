@@ -2,21 +2,23 @@ import os
 import pickle
 
 
-def checkInfo(list_contests, contest, task, programs, test_cases, program_id, language, cwd):
+def checkInfo(list_contests,list_tasks, contest, task, programs, test_cases, program_id, language, cwd):
     srcPath = os.path.join(cwd,"Code")
     testPath = os.path.join(cwd,"Test")
     if list_contests==True:
-
         dirList = os.listdir(srcPath)
         dirNameList = []
         for dirName in dirList:
             dirNameList.append(dirName)
 
+        contestList=[]
         for dirName in dirNameList:
             if os.path.isdir(os.path.join(srcPath, dirName)):
                 # get contest name from a dir
                 problemName = dirName.split('_')[0]
-                print(problemName)
+                if problemName not in contestList:
+                    contestList.append(problemName)
+                    print(problemName)
     elif contest!=None:
         dirList = os.listdir(srcPath)
         dirNameList = []
@@ -29,6 +31,12 @@ def checkInfo(list_contests, contest, task, programs, test_cases, program_id, la
                 problemName = dirName.split('_')[0]
                 if problemName.lower() == str(contest).lower():
                     print(dirName.split('_')[0]+"_"+dirName.split('_')[1])
+    elif list_tasks==True:
+        dirList = os.listdir(srcPath)
+        dirNameList = []
+        for dirName in dirList:
+            dirNameList.append(dirName)
+            print(dirName)
     elif task!=None:
         #check language
         if programs==True:
