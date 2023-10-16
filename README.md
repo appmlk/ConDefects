@@ -1,6 +1,14 @@
 # ConDefects Dataset and Toolkit
 
-ConDefects is a specialized dataset and toolkit derived from student submissions on the AtCoder platform. It's engineered to advance research in **Fault Localization** and **Program Repair**. The toolkit comes with a unique time-filtering feature, providing the flexibility to evaluate various Language Learning Models. It goes beyond being just a collection of faulty code, offering annotations for each code snippet that detail the precise fault position and its corrected version. Additionally, it includes utilities for **running tests** and **collecting coverage information**.
+- **ConDefects**: A specialized dataset and toolkit curated from student submissions on the AtCoder platform. It's engineered to push the boundaries of **Fault Localization** and **Program Repair**, while also addressing the issue of data leakage that could distort the evaluation of various approaches.
+
+- **Data Leakage Concerns**: Particularly relevant for Large Language Models like ChatGPT, data leakage poses a risk as their training could incorporate information beyond the creation of many existing datasets. ConDefects mitigates this with a **unique time-filtering feature** for more accurate assessments.
+
+- **Labeled Code Snippets**: ConDefects is more than just a collection of faulty code. It provides labeled snippets that detail the exact **fault position** and its corrected version, enriching its value for fault localization and program repair research.
+
+- **Additional Utilities**: The toolkit is equipped with features for **running tests** and **collecting coverage information**, adding another layer of utility for research.
+
+
 
 
 ## Dataset Checkout
@@ -32,23 +40,17 @@ python3 ConDefects.py info [options]
 
 The `info` command encompasses multiple options for querying specific elements of the dataset:
 
-### List Contests
 
-Getting a list of all available contests:
+### Output Tasks
 
-```bash
-python3 ConDefects.py info --list-contests
-```
-
-### List Contest Tasks
-
-Getting a list of all available tasks within a specific contest, specify the contest name:
+Getting a list of all available tasks:
 
 ```bash
-python3 ConDefects.py info --contest <contest_name>
+python3 ConDefects.py info --list-tasks
 ```
 
-### List Test Cases
+
+### Output Test Cases
 
 Getting a list of all test cases available for a specific task, specify the task name:
 
@@ -56,7 +58,7 @@ Getting a list of all test cases available for a specific task, specify the task
 python3 ConDefects.py info --test-cases --task <task_name>
 ```
 
-### List Programs
+### Output Programs
 
 Getting a list of all programs available as well as their ID for a specific task, specify the task name along with the language (`java` or `python`):
 
@@ -64,7 +66,7 @@ Getting a list of all programs available as well as their ID for a specific task
 python3 ConDefects.py info --programs --task <task_name> --language <language>
 ```
 
-### Program Fault Details
+### Output Program Fault Details
 
 Getting details about the fault position, content of faulty statement, and the corresponding corrected statement, specify the program ID:
 
