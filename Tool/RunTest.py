@@ -264,6 +264,9 @@ def runTest(destination_directory, output_directory, task, testLimit, cwd, cover
                 covMatrix, res, testList=getSrcCov_PY(codeID, testLimit,codePath,targetTestPath,read_line(codePath),tempPath)
                 shutil.rmtree(tempPath)
             print("task",dir,"code:",codeID)
+            if covMatrix == None or res == None:
+                print("Error: Test failed.", codeID)
+                continue
             for testIndex in range(len(testList)):
                 print("test:",testList[testIndex],"result:",res[testIndex])
             if res==None:
@@ -275,7 +278,7 @@ def runTest(destination_directory, output_directory, task, testLimit, cwd, cover
                 if item==True:
                     passNum+=1
             print("pass rate:",passNum/len(res))
-            if coverage!=None:
+            if coverage!=False:
                 covMatrixPath=os.path.join(output_directory,dir,languag,codeID,"covMatrix.txt")
                 resultPath=os.path.join(output_directory,dir,languag,codeID,"results.txt")
                 testListPath=os.path.join(output_directory,dir,languag,codeID,"testList.txt")
@@ -297,6 +300,7 @@ def runTest(destination_directory, output_directory, task, testLimit, cwd, cover
                 print("covMatrix saved in",covMatrixPath)
 
 
+# runTest(r"D:\test",None,None,None,"D:\\ConDefects",False)
 # runTest(r"D:\test",r"D:\test2",None,None,"D:\\AtCoder",True)
 # runTest(r"D:\test",r"D:\test2","abc240_a","000.txt","D:\\AtCoder",True)
 # runTest(r"D:\test",r"D:\test2",None,None,"D:\\AtCoder",True)
