@@ -1,17 +1,17 @@
 # ConDefects Dataset and Toolkit
 
-- **ConDefects**: A specialized dataset and toolkit curated from student submissions on the AtCoder platform. It's engineered to push the boundaries of **Fault Localization** and **Program Repair**, while also addressing the issue of data leakage that could distort the evaluation of various approaches.
+With the growing interest on Large Language Models (LLMs) for fault localization and program repair, ensuring the integrity and generalizability of the LLM-based methods becomes paramount. The code in existing widely-adopted benchmarks for these tasks was written before the the bloom of LLMs and may be included in the training data of existing popular LLMs, thereby suffering from the threat of data leakage, leading to misleadingly optimistic performance metrics. To address this issue, we introduce "ConDefects", a novel dataset of real faults meticulously curated to eliminate such overlap. 
 
-- **Data Leakage Concerns**: Particularly relevant for Large Language Models like ChatGPT, data leakage poses a risk as their training could incorporate information beyond the creation of many existing datasets. ConDefects mitigates this with a **unique time-filtering feature** for more accurate assessments.
+ConDefects contains 1,254 Java faulty programs and 1,625 Python faulty programs.
+All these programs are sourced from the online competition platform AtCoder and were produced between October 2021 and September 2023.
 
-- **Labeled Code Snippets**: ConDefects is more than just a collection of faulty code. It provides labeled snippets that detail the exact **fault position** and its corrected version, enriching its value for fault localization and program repair research.
+We pair each fault with fault locations and the corresponding repaired code versions, making it tailored for in fault localization and program repair related research.
+We also provide interfaces for selecting subsets based on different time windows and coding task difficulties.
+While inspired by LLM-based tasks, ConDefects can be adopted for benchmarking ALL types of  fault localization and program repair methods.
+The dataset is publicly available, and a demo video can be found at https://www.youtube.com/watch?v=22j15Hj5ONk.
 
-- **Additional Utilities**: The toolkit is equipped with features for **running tests** and **collecting coverage information**, adding another layer of utility for research.
 
-
-
-
-## Dataset Checkout
+## Test Cases Download
 Since the root directory contains a large `Test.zip` file, multiple download options are provided for your convenience.
 - **MEGA Drive**: [Download from MEGA](https://mega.nz/file/qnohWRhY#L7qgO7C3qqsXyQqJzLuPUJy06dEmnff9J1nUGYNPAHQ)
 - **OneDrive**: [Download from OneDrive](https://1drv.ms/u/s!Auo_FVX2RDMxn5MJgml8-0clWIMQSw?e=1gfISm)
@@ -86,9 +86,9 @@ python3 ConDefects.py checkout -w <dest_dir> [options]
 
 * **Destination Directory** (`-w`): Specifies the directory where the checked-out dataset will be stored.
 * **Language** (`-l`): Specifies the programming language (`java` or `python`).
-* **Time Span** (`-t`): Filters tasks by their start and end dates. The dates should be in the format `YYYY-MM-DD`.
-* **Difficulty Level** (`-d`): Filters tasks by their difficulty levels. Enter two integers to specify the lower and upper bounds.
-* **Specific Task** (`-s`): Filters tasks by task name.
+* **Time Span** (`-t`): Selects coding-tasks by their start and end dates. The dates should be in the format `YYYY-MM-DD`. It's important to note that the end date should be greater than start date, and both dates should fall within our current dataset's time range, which is from 2021-10-01 to 2023-09-30.
+* **Difficulty Level** (`-d`): Selects coding-tasks by their difficulty levels. Enter two integers to specify the lower and upper bounds.
+* **Specific Task** (`-s`): Selects coding-tasks by a certain coding-task name.
 
 ## Execution and Test Case Report
 
