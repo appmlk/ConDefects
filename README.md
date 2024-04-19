@@ -128,3 +128,13 @@ python3 ConDefects.py coverage -w <dest_dir> -o <output_dir> [options]
   - `covMatrix.txt`: Contains statement coverage information, where each line represents the coverage for a specific test case.
   - `results.txt`: Holds the test results for each test case, indicating whether the test passed (`True`) or failed (`False`).
   - `testList.txt`: Lists the order of test case execution, correlating to the lines in `covMatrix.txt` and `results.txt`.
+
+## Ensuring Legal Compliance
+
+Our data is stored on the U.S. website GitHub, and the paper citing this data is planned for publication at a conference under the American publisher ACM. Consequently, our data usage adheres to the U.S. Digital Millennium Copyright Act (DMCA).
+
+Under DMCA §1201, "No person shall circumvent a technological measure that effectively controls access to a work protected under this title." Our data collection methods from Atcoder do not circumvent any such access controls, ensuring compliance with this statute. For detail, visit [https://www.law.cornell.edu/uscode/text/17/1201](https://www.law.cornell.edu/uscode/text/17/1201).
+
+Moreover, the development of the ConDefects dataset is governed by Fair Use §107, which allows for "the fair use of a copyrighted work, including such use by... scholarship, or research, is not an infringement of copyright." This non-commercial use is intended solely for academic purposes and is unlikely to impact the original work’s market value. For detail, visit [[https://www.law.cornell.edu/uscode/text/17/1201](https://www.law.cornell.edu/uscode/text/17/107)]([https://www.law.cornell.edu/uscode/text/17/1201](https://www.law.cornell.edu/uscode/text/17/107)).
+
+In conclusion, our use of Atcoder data for the ConDefects dataset fully complies with Fair Use under §107 and DMCA §1201, ensuring that our research is legally sound and does not infringe upon copyrights.
