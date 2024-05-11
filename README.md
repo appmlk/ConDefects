@@ -143,4 +143,7 @@ In Conclusion, our data storage, usage, and collection practices ensure full com
 
 ## License
 
-The ConDefects data is licensed under CC BY license, and our code is open-sourced under the MIT license.
+The ConDefects data is licensed under CC BY-SA 4.0 license [^1], and our code is open-sourced under the MIT license [^2].
+
+[^1]: https://creativecommons.org/share-your-work/cclicenses/
+[^2]: https://opensource.org/license/mit
