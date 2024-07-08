@@ -10,6 +10,10 @@ We also provide interfaces for selecting subsets based on different time windows
 While inspired by LLM-based tasks, ConDefects can be adopted for benchmarking ALL types of  fault localization and program repair methods.
 The dataset is publicly available, and a demo video can be found at https://www.youtube.com/watch?v=22j15Hj5ONk.
 
+## Update (2024/6)
+ConDefects dataset has been updated to include data up until June 2024.
+The following chart illustrates the distribution of the dataset by time.
+![Time-based Data Distribution](https://github.com/appmlk/ConDefects/blob/main/Distribution.png)
 
 ## Test Cases Download
 Since the root directory contains a large `Test.zip` file, multiple download options are provided for your convenience.
