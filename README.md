@@ -17,9 +17,8 @@ The following chart illustrates the distribution of the dataset by time.
 
 ## Test Cases Download
 Since the root directory contains a large `Test.zip` file, multiple download options are provided for your convenience.
-- **MEGA Drive**: [Download from MEGA](https://mega.nz/file/qnohWRhY#L7qgO7C3qqsXyQqJzLuPUJy06dEmnff9J1nUGYNPAHQ)
-- **OneDrive**: [Download from OneDrive](https://1drv.ms/u/s!Auo_FVX2RDMxn5MJgml8-0clWIMQSw?e=1gfISm)
-- **Baidu Drive**: Link: https://pan.baidu.com/s/188qz6TttRN6ZTn0XypkmHw?pwd=bbjg, Extraction Code: bbjg
+- **OneDrive**: [Download from OneDrive](https://1drv.ms/u/s!Auo_FVX2RDMxn6g_jFpzEGOjScia7Q?e=lgOeyi)
+- **Baidu Drive**: Link: https://pan.baidu.com/s/1YsTYWMfV3L16irItGJQlmA?pwd=hdlz 
 
 ## Additional Files
 The root directory also contains two readable files, `date.txt` and `difficulty.txt`, which provide information about the commencement date and difficulty level of all tasks, respectively.
