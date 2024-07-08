@@ -1,0 +1,1 @@
+print("YNeos"[(k:=int(input()[3:]))==316or k>349::2])

@@ -1,0 +1,1 @@
+N,S=[*open(0)];print(S.find('ABC'))

@@ -1,0 +1,1 @@
+print("".join(str(2**i)for i in range(1,99)))

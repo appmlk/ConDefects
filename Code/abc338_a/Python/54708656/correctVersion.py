@@ -1,0 +1,1 @@
+print("NYoe s"[input().istitle()::2])
