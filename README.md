@@ -15,6 +15,23 @@ ConDefects dataset has been updated to include data up until June 2024.
 The following chart illustrates the distribution of the dataset by time.
 ![image](https://github.com/appmlk/ConDefects/blob/main/Distribution.png)
 
+The table below provides statistics for ConDefects, showcasing the number of coding tasks, total number of files, average lines of code, and average number of functions for both Java and Python languages.
+
+| Feature          | Java  | Python |
+| ---------------- | ----- | ------ |
+| **# Task**       | 810   | 985    |
+| **# Files**      | 2045  | 2864   |
+| **Average LOC**  | 259.22 | 49.03  |
+| **Average # Func.** | 22.45 | 2.91  |
+
+\# Task: Number of coding tasks
+
+\# Files: Total number of files
+
+Average LOC: Average lines of code
+
+Average # Func.: Average number of functions
+
 ## Test Cases Download
 Since the root directory contains a large `Test.zip` file, multiple download options are provided for your convenience.
 - **OneDrive**: [Download from OneDrive](https://1drv.ms/u/s!Auo_FVX2RDMxn6g_jFpzEGOjScia7Q?e=lgOeyi)
